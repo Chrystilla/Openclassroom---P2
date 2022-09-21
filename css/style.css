@@ -155,6 +155,7 @@ button {
 .fa-solid.fa-magnifying-glass {
     display:contents;
     color:white;
+    cursor: pointer;
 }
 }
 
@@ -341,6 +342,28 @@ a {
     background-color: #deebff;
 }
 
+/*Adaptation Section 2 écran tel*/
+@media all and (max-width: 768px)
+{
+#section-hebergements {
+    flex-direction: column-reverse;
+}
+
+.conteneur-card-populaires {
+    border-radius: 0px;
+}
+
+.conteneur-card-hebergements {
+    background-color: transparent;
+    margin-right:0px;
+}
+
+.hebergements-item {
+    width: 370px;
+    height: 220px;
+    margin-bottom:8%;
+}
+
 /*SECTION 3 : Activites - TITRES*/
 #section-activites h2 {
     margin : 40px 0PX 20px 0px;
@@ -414,6 +437,17 @@ a {
     cursor:pointer;
 }
 
+/*Adaptation Section 3 écran tel*/
+@media all and (max-width: 768px)
+{
+.conteneur-card-activites {
+        flex-wrap: nowrap;
+}
+
+.activites-item {
+    width:85%;
+}
+
 /*FOOTER : Conteneur*/
 footer {
     background-color: #F2F2F2;
@@ -441,4 +475,20 @@ footer li {
 
 footer li:hover {
     text-decoration: underline;   
+}
+
+/*Adaptation Footer écran tel*/
+@media all and (max-width: 768px)
+{
+footer {
+    flex-direction: column;
+}
+
+.elements-footer {
+    width:100%;
+}
+
+footer li {
+    padding-bottom:2%;
+}
 }
