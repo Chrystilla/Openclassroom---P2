@@ -1,16 +1,19 @@
-/*Intégration police raleway*/
+/*Intégration police RALEWAY*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
 
-#page {
-    max-width: 1440px;
-    margin:auto;
-}
+
 /*Format de police et box-sizing*/
 * {
     font-family: raleway, Arial,'Arial black',sans-serif;
     box-sizing: border-box;
     margin:0PX;
     padding:0PX;
+}
+
+/*FORMAT PAGE MAX*/
+#page {
+    max-width: 1440px;
+    margin:auto;
 }
 
 /*HEADER*/
@@ -49,34 +52,35 @@ nav ul li :hover {
     color:#0065fc
 }
 
-/*Adaptation Header écran tel*/
-@media all and (max-width: 768px)
+/*ADAPTATION HEADER - ECRAN TABLETTE (& TEL)*/
+@media all and (max-width: 992px)
 {
-header { /*Nav à la ligne*/
-    flex-direction: column 
-}
+    header { /*Nav à la ligne*/
+        flex-direction: column 
+    }
 
-header img { /*Ajustement taille img*/
-    width: 150px; 
-}
+    header img { /*Ajustement taille img*/
+        width: 150px; 
+    }
 
-nav, nav ul, nav ul li { /*Ajustement taille menu nav*/
-    width: 100%;
-    display:flex;
-    justify-content: center;
-    text-align: center;    
-}
+    nav, nav ul, nav ul li { /*Ajustement taille menu nav*/
+        width: 100%;
+        display:flex;
+        justify-content: center;
+        text-align: center;
+    }
 
-nav ul li a { /*Bordure gris sur le lien*/
-border-bottom: 2px solid #F2F2F2;
-width: 100%;
-}
+    nav ul li a { /*Bordure gris sur le lien*/
+        border-bottom: 2px solid #F2F2F2;
+        width: 100%;
+    padding: 0px 0px 10px 0px;
+    }
 
-nav ul li :hover { /*Ajustement propriété survol*/
-    border-bottom: 2PX Solid #0065fc;
-    border-top : none;
-    color:#0065fc;
-}
+    nav ul li :hover { /*Ajustement propriété survol*/
+        border-bottom: 2PX Solid #0065fc;
+        border-top : none;
+        color:#0065fc;
+    }
 }
 
 /*SECTION 1: RECHERCHE*/
@@ -136,27 +140,28 @@ input {
     cursor: pointer;
 }
 
-/*Adaptation Section 1 = Section Recherche sur écran tel*/
-@media all and (max-width: 768px)
+/*ADAPTATION SECTION 1 = SECTION RECHERCHE SUR ECRAN TABLETTE (& TEL)*/
+@media all and (max-width: 992px)
 {
-#boutonrecherche {
-    display:none;
+    #boutonrecherche {
+        display:none;
     }
 
-button {
-    background-color: #0065fc;
-    border-color: #0065fc;
-    border-radius: 15px;
-    padding:15px;
-    height: 50px;
-    position:absolute;
-    left: 230px;
-}
-.fa-solid.fa-magnifying-glass {
-    display:contents;
-    color:white;
-    cursor: pointer;
-}
+    button {
+        background-color: #0065fc;
+        border-color: #0065fc;
+        border-radius: 15px;
+        padding:15px;
+        height: 50px;
+        position:absolute;
+        left: 230px;
+    }
+
+    .fa-solid.fa-magnifying-glass {
+        display:contents;
+        color:white;
+        cursor: pointer;
+    }
 }
 
 /*CONTENEUR FILTRES*/
@@ -269,7 +274,7 @@ button {
     border-radius: 20px;
     margin-bottom: 15%;
     background-color: white;
-    padding:2%;
+    padding:5PX;
     box-shadow: 0px 0px 15px #0000002e;
 }
 
@@ -280,7 +285,7 @@ button {
     border-radius: 20px;
     margin:0px 30px 30px 30px;
     background-color: white;
-    padding:1%;
+    padding:5px;
     display: flex;
     padding-right:10%;
     box-shadow: 0px 0px 15px #0000002e;
@@ -342,28 +347,52 @@ a {
     background-color: #deebff;
 }
 
-/*Adaptation Section 2 écran tel*/
+/*ADAPTATION SECTION 2 = SECTION HEBERGEMENTS SUR ECRAN TABLETTE*/
+@media all and (max-width: 992px)
+{
+    #section-hebergements {
+        flex-direction: column-reverse;
+    }
+    .conteneur-card-populaires {
+        border-radius: 0px;
+    }
+    .conteneur-card-hebergements {
+        background-color: transparent;
+    }
+    #conteneur-populaires {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #section-hebergements a {
+        width: 50%;
+        padding: 0PX 10px;
+    }
+    .populaires-item {
+        width:auto;
+        height:160px;
+        margin: 0% 1% 5% 1%;
+    }
+    .hebergements-item {
+        width: auto;
+        height: 250px;
+        margin-bottom:5%;
+    }
+}
+
+/*ADAPTATION SECTION 2 = SECTION HEBERGEMENTS SUR ECRAN TEL*/
 @media all and (max-width: 768px)
 {
-#section-hebergements {
-    flex-direction: column-reverse;
+    #section-hebergements a {
+        width: 100%;
+        padding: 0PX 20px;
+    }
+    .hebergements-item {
+        height: auto;
+    }
+    #conteneur-hebergements img {
+        max-height: 150px;
+    }
 }
-
-.conteneur-card-populaires {
-    border-radius: 0px;
-}
-
-.conteneur-card-hebergements {
-    background-color: transparent;
-    margin-right:0px;
-}
-
-.hebergements-item {
-    width: 370px;
-    height: 220px;
-    margin-bottom:8%;
-}
-
 /*SECTION 3 : Activites - TITRES*/
 #section-activites h2 {
     margin : 40px 0PX 20px 0px;
@@ -446,6 +475,7 @@ a {
 
 .activites-item {
     width:85%;
+}
 }
 
 /*FOOTER : Conteneur*/
