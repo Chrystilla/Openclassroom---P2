@@ -247,14 +247,14 @@ input {
 }
 
 /*SECTION 2 : HEBERGEMENTS - titres*/
-#section-hebergements h2 {
-    margin : 40px 0PX 20px 30px;
+.titre-hebergements {
+    margin : 30px 30PX 20px 30px;
 }
 #titre-et-icone {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right: 30px;
+    margin: 30px 30PX 20px 30px;
 }
 #afficher-plus {
     margin: 1% 0% 3.5% 3.5%;
@@ -277,6 +277,9 @@ input {
     background-color: white;
     padding:5PX;
     box-shadow: 0px 0px 15px #0000002e;
+}
+#conteneur-hebergements a {
+    padding: 0PX 5PX;
 }
 
 /*SECTION 2 : Cards - Populaires*/
@@ -483,6 +486,7 @@ a {
     } 
     .activite-img-grande, .activite-img-moyenne, .activite-img-petite {
         position:unset;
+        height:auto;
         max-height:200px;
     }
     .activite-name {
@@ -502,7 +506,7 @@ footer {
 /*FOOTER : Eléments*/
 .elements-footer {
     width: 30%;
-    padding: 2% 3%;
+    padding: 30px;
 }
 
 /*FOOTER :Titres*/
