@@ -155,6 +155,7 @@ input {
         height: 50px;
         position:absolute;
         left: 230px;
+        bottom:0px;
     }
 
     .fa-solid.fa-magnifying-glass {
@@ -466,16 +467,34 @@ a {
     cursor:pointer;
 }
 
-/*Adaptation Section 3 écran tel*/
+/*ADAPTATION SECTION 3 = SECTION ACTIVITES SUR ECRAN TEL*/
 @media all and (max-width: 768px)
 {
-.conteneur-card-activites {
-        flex-wrap: nowrap;
-}
+    .conteneur-card-activites {
+        height:auto;
+        align-items: center;
+        }
 
-.activites-item {
-    width:85%;
-}
+    .activites-item {
+        width: 90%;
+        margin:0px 30px 30px 30px;
+    } 
+    .activite-img-grande {
+        position:unset;
+        max-height:150px;
+    }
+    .activite-img-moyenne {
+        position:unset;
+        max-height:150px;
+    }
+    .activite-img-petite {
+        position:unset;
+        max-height:150px;
+    }
+    .activite-name {
+        position: unset;
+        padding: 15px;
+    }
 }
 
 /*FOOTER : Conteneur*/
