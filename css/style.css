@@ -394,6 +394,7 @@ a {
         max-height: 150px;
     }
 }
+
 /*SECTION 3 : Activites - TITRES*/
 #section-activites h2 {
     margin : 40px 0PX 20px 0px;
@@ -472,27 +473,21 @@ a {
 {
     .conteneur-card-activites {
         height:auto;
-        align-items: center;
+        margin-right: 20px;
+        padding:0px 20px;
         }
 
     .activites-item {
-        width: 90%;
-        margin:0px 30px 30px 30px;
+        width: 100%;
+        margin-bottom:5%;
     } 
-    .activite-img-grande {
+    .activite-img-grande, .activite-img-moyenne, .activite-img-petite {
         position:unset;
-        max-height:150px;
-    }
-    .activite-img-moyenne {
-        position:unset;
-        max-height:150px;
-    }
-    .activite-img-petite {
-        position:unset;
-        max-height:150px;
+        max-height:200px;
     }
     .activite-name {
         position: unset;
+        font-size:none;
         padding: 15px;
     }
 }
