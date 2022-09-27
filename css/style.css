@@ -146,7 +146,7 @@ input {
         padding:15px;
         height: 50px;
         position:absolute;
-        left: 230px;
+        left: 225px;
         bottom:0px;
     }
     .fa-solid.fa-magnifying-glass {
@@ -217,7 +217,7 @@ input {
     align-items: center;
 }
 
-/*SECTION 2 : HEBERGEMENTS - Conteneurs blocs gris*/
+/*SECTION 2 : HEBERGEMENTS - Conteneurs Section*/
 #section-hebergements {
     display: flex;
 }
@@ -246,10 +246,9 @@ input {
 }
 #afficher-plus {
     margin: 5px 0px 20px 20px;
-    font-weight: bold;
 }
 
-/*SECTION 2 : HEBERGEMENTS - Contenants blocs gris*/
+/*SECTION 2 : HEBERGEMENTS - Conteneur cards hébergements*/
 #conteneur-hebergements {
     display: flex;
     justify-content: space-evenly;
@@ -267,7 +266,7 @@ input {
     box-shadow: 0px 0px 15px #0000002e;
 }
 #conteneur-hebergements a {
-    padding: 0PX 5PX;
+    padding: 0PX 5PX; /*Utile pour le responsive*/
 }
 
 /*SECTION 2 : HEBERGEMENTS - Cards Populaires*/
@@ -299,25 +298,21 @@ input {
     border-radius: 15px 0px 0px 15px;
 }
 
-/*SECTION 2 : HEBERGEMENTS - Libellés Hébergements*/
-.hebergements-text {
-    padding-left: 5%;
-}
-
-/*SECTION 2 : HEBERGEMENTS - Libellés Populaires*/
-.populaires-text {
-    padding-left: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
+/*SECTION 2 : HEBERGEMENTS - Descriptif Hébergements & Populaires*/
 .hotel-name, .hotel-price, .stars {
     padding-top: 3%;
+    padding-left: 5%;
     font-size:90%;
 }
 .stars {
     padding-bottom:3%;
+}
+
+/*SECTION 2 : HEBERGEMENTS - Descriptif Populaires*/
+.populaires-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /*SECTION 2 : HEBERGEMENTS - Etoiles*/
@@ -350,7 +345,7 @@ input {
         flex-wrap: wrap;
     }
     #section-hebergements a {
-        width: 50%;
+        width: 50%; /*La card prend 50% de la largeur*/
         padding: 0PX 10px;
     }
     .populaires-item {
@@ -369,14 +364,14 @@ input {
 @media all and (max-width: 768px)
 {
     #section-hebergements a {
-        width: 100%;
+        width: 100%; /*La card prend 100% de la largeur*/
         padding: 0PX 20px;
     }
     .hebergements-item {
         height: auto;
     }
     #conteneur-hebergements img {
-        max-height: 150px;
+        max-height: 150px; /*Pour que l'image ne soit pas trop grande*/
     }
 }
 
@@ -387,8 +382,8 @@ input {
 
 .activite-name {
     margin-left:20px;
-    position:absolute;
-    bottom:20px;
+    position:absolute; /*Pour positionner le titre là où je veux*/
+    bottom:4%;
     font-size: 15px;
 }
 
@@ -407,24 +402,24 @@ input {
     width:23%; /*Largeur de chaque item : 23% pour laisser 2% de marge*/
     box-shadow: 0px 0px 15px #0000002e;
     border-radius:20px;
-    position:relative;
+    position:relative; /*permet de Mettre l'image dans son contenant*/
 }
 
 #activite-1, #activite-4 {
-    flex-basis: 100%; /*100% de la taille*/
+    height: 100%; /*100% de la hauteur*/
 }
 
 #activite-2, #activite-6 {
-    flex-basis:55%; /*55% de la taille*/
+    height:55%; /*55% de la hauteur*/
 }
 
 #activite-3, #activite-5 {
-    flex-basis: 40%; /*40% de la taille pour laisser 5% de marge*/
+    height: 40%; /*40% de la hauteur pour laisser 5% de marge entre les 2*/
 }
 
 /*SECTION 3 : ACTIVITES - Photos*/
 .activite-img-grande {
-    position:absolute; /*SECTION 3 : permet de Mettre l'image dans son contenant*/
+    position:absolute; /*permet de Mettre l'image dans son contenant*/
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
     height: 88%;
@@ -432,7 +427,7 @@ input {
 }
 
 .activite-img-moyenne {
-    position:absolute; /*SECTION 3 : permet de Mettre l'image dans son contenant*/
+    position:absolute; /*permet de Mettre l'image dans son contenant*/
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
     height: 78%;
@@ -440,7 +435,7 @@ input {
 }
 
 .activite-img-petite {
-    position:absolute; /*SECTION 3 : permet de Mettre l'image dans son contenant*/
+    position:absolute; /*permet de Mettre l'image dans son contenant*/
     object-fit: cover;
     border-radius: 20px 20px 0px 0px;
     height: 70%;
@@ -464,7 +459,6 @@ input {
         margin-right: 20px;
         padding:0px 20px;
         }
-
     .activites-item {
         width: 100%;
         margin-bottom:5%;
@@ -476,7 +470,6 @@ input {
     }
     .activite-name {
         position: unset;
-        font-size:none;
         padding: 15px;
     }
 }
@@ -490,8 +483,8 @@ footer {
 
 /*FOOTER : Eléments*/
 .elements-footer {
-    width: 30%;
-    padding: 30px;
+    width: 35%;
+    padding: 10px;
 }
 
 /*FOOTER : Titres*/
@@ -513,15 +506,13 @@ footer li:hover {
 /*ADAPTATION FOOTER SUR ECRAN TEL*/
 @media all and (max-width: 768px)
 {
-footer {
-    flex-direction: column;
-}
-
-.elements-footer {
-    width:100%;
-}
-
-footer li {
-    padding-bottom:2%;
-}
+    footer {
+        flex-direction: column;
+    }
+    .elements-footer {
+        width:100%;
+    }
+    footer li {
+        padding-bottom:2%;
+    }
 }
