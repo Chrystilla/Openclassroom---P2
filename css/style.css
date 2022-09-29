@@ -109,10 +109,6 @@ font-size:20px;
     align-items: center;
 }
 
-.fa-solid.fa-magnifying-glass {
-    display:none;
-}
-
 /*SECTION 1 : RECHERCHE - Formulaire*/
 input {
     font-weight: bold ;
@@ -131,6 +127,10 @@ input {
     position:absolute;
     left: 250px;
     cursor: pointer;
+}
+
+.fa-solid.fa-magnifying-glass {
+    display:none;
 }
 
 /*ADAPTATION SECTION 1 = SECTION RECHERCHE SUR ECRAN TABLETTE (& TEL)*/
